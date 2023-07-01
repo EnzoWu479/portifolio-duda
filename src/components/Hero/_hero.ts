@@ -22,6 +22,7 @@ export const HeroImage = styled.div`
   background-image: url('/assets/imgs/hero.svg');
   background-repeat: no-repeat;
   background-position: right;
+  background-size: contain;
 
   transform: translateZ(-10px) scale(2);
 `;
