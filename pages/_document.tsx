@@ -45,6 +45,12 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Noto+Sans:wght@300;400;500&display=swap"
           rel="stylesheet"
         />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700;900&display=swap"
+          rel="stylesheet"
+        />
 
         <meta name="robots" content="noindex" />
       </Head>
@@ -52,7 +58,7 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div id='modal-root'></div>
+        <div id="modal-root"></div>
       </body>
     </Html>
   );
