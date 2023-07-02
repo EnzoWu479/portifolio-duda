@@ -10,9 +10,6 @@ export const Container = styled(SectionScroll)`
   flex-direction: column;
   justify-content: center;
 
-  ${media.mobile} {
-    background-position: center;
-  }
   z-index: -1;
 `;
 export const HeroImage = styled.div`
@@ -25,6 +22,10 @@ export const HeroImage = styled.div`
   background-size: contain;
 
   transform: translateZ(-10px) scale(2);
+  ${media.mobile} {
+    background-position: center;
+    background-size: cover;
+  }
 `;
 export const Infos = styled.div`
   color: ${({ theme }) => theme.colors.white}80;
@@ -70,7 +71,7 @@ export const ButtonContact = styled(ButtonPortifolio)`
   color: ${({ theme }) => theme.colors['purple-2']};
 
   transition: all 0.2s ease-in-out;
-  
+
   &:hover {
     background-color: ${({ theme }) => theme.colors['purple-1']};
     color: ${({ theme }) => theme.colors.white};
