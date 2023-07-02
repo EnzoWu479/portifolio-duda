@@ -14,7 +14,7 @@ export const Container = styled.footer`
   /* height: calc(100dvh - 80px); */
   color: ${({ theme }) => theme.colors.white}80;
   ${media.laptop} {
-    padding: 1rem 5%;
+    padding: 4rem 5%;
   }
 `;
 export const FooterWrapper = styled.div`
