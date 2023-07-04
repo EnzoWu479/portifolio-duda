@@ -10,21 +10,27 @@ export const Container = styled(SectionScroll)`
   flex-direction: column;
   justify-content: center;
 
-  z-index: -1;
+  
+
+  ${media.mobile} {
+    align-items: center;
+  }
 `;
 export const HeroImage = styled.div`
   position: absolute;
+  /* inset: 60px 0; */
   inset: 0;
 
   background-image: url('/assets/imgs/hero.svg');
   background-repeat: no-repeat;
   background-position: right;
-  background-size: contain;
+  background-size: 60% 100%;
 
-  transform: translateZ(-10px) scale(2);
+  transform: translateZ(-5px) scale(1.5);
   ${media.mobile} {
     background-position: center;
     background-size: cover;
+    filter: brightness(0.3) blur(3px);
   }
 `;
 export const Infos = styled.div`
@@ -56,7 +62,11 @@ export const ButtonContainer = styled.div`
   margin-top: 0.2rem;
 `;
 export const ButtonPortifolio = styled.button`
-  background-color: ${({ theme }) => theme.colors['purple-1']};
+  background: linear-gradient(
+    to top,
+    ${({ theme }) => theme.colors['purple-2']} 0%,
+      ${({ theme }) => theme.colors['purple-1']} 100%
+  );
   color: ${({ theme }) => theme.colors.white};
 
   height: 40px;
@@ -66,9 +76,9 @@ export const ButtonPortifolio = styled.button`
   cursor: pointer;
 `;
 export const ButtonContact = styled(ButtonPortifolio)`
-  background-color: transparent;
-  border: 1px solid ${({ theme }) => theme.colors['purple-1']};
-  color: ${({ theme }) => theme.colors['purple-2']};
+  background-image: none;
+  border: 1px solid ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.white};
 
   transition: all 0.2s ease-in-out;
 

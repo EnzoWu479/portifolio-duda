@@ -8,8 +8,11 @@ export const SectionScroll = styled.section`
   padding: 0 10%;
 
   transform-style: preserve-3d;
-  
+
   height: calc(100dvh - 80px);
+  z-index: -1;
+
+  /* background-color: ${({ theme }) => theme.colors.background}; */
 
   ${media.laptop} {
     padding: 0 5%;
