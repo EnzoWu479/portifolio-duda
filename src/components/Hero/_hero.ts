@@ -10,8 +10,6 @@ export const Container = styled(SectionScroll)`
   flex-direction: column;
   justify-content: center;
 
-  
-
   ${media.mobile} {
     align-items: center;
   }
@@ -21,10 +19,16 @@ export const HeroImage = styled.div`
   /* inset: 60px 0; */
   inset: 0;
 
-  background-image: url('/assets/imgs/hero.svg');
+  background-image: linear-gradient(
+      to top,
+      ${({ theme }) => theme.colors['background']} 0% 10%,
+      transparent 50% 60%,
+      ${({ theme }) => theme.colors['purple-3']} 95% 100%
+    ),
+    url('/assets/imgs/hero.webp');
   background-repeat: no-repeat;
   background-position: right;
-  background-size: 60% 100%;
+  background-size: 100%;
 
   transform: translateZ(-5px) scale(1.5);
   ${media.mobile} {
@@ -65,7 +69,7 @@ export const ButtonPortifolio = styled.button`
   background: linear-gradient(
     to top,
     ${({ theme }) => theme.colors['purple-2']} 0%,
-      ${({ theme }) => theme.colors['purple-1']} 100%
+    ${({ theme }) => theme.colors['purple-1']} 100%
   );
   color: ${({ theme }) => theme.colors.white};
 
